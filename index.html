@@ -1,9 +1,49 @@
+<!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-	<script src="index.js"></script>
+        <header>
+            <div class="container">
+                <h1>Jimmy’s Diner</h1>
+                <p>The best burgers and pizzas in town.</p>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="menu-list" id="menu-list"></div>
+            </section>
+            <section class="order-summary" style="display: none">
+                <h2>Your Order</h2>
+                <div id="order-list"></div>
+                <div class="total-price">
+                <h2>Total price:</h2>
+                <p class="item-price price-order" id="order-price">0$</p>
+                </div>
+                <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+            </section>
+            <!-- Modal for Payment Form -->
+            <div id="payment-modal" class="modal">
+                <div class="modal-content">
+                    <h2>Enter card details</h2>
+                    <form id="payment-form">
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        <input type="text" id="card-number" name="card-number" maxlength="16" required placeholder="Enter card number">
+                        <input type="text" id="cvv" name="cvv" maxlength="3" required placeholder="Enter CVV">
+                        
+                        <button type="submit" id="pay-btn">Pay</button>
+                    </form>
+                </div>
+            </div>
+            <div id="order-message" class="hidden"></div>
+
+        </main>
+        
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
