@@ -111,6 +111,9 @@ function handlePaymentSubmission() {
     const orderMessage = document.getElementById("order-message");
     orderMessage.textContent = `Thanks, ${name}! Your order is on its way!`;
     orderMessage.style.display = "block";
+    // Show the rating section
+    const ratingContainer = document.getElementById("rating-container");
+    ratingContainer.style.display = "block";
     orders = []; // Clear the orders array
     orderList.innerHTML = ""; // Clear the order list UI
     orderPrice.textContent = "$0"; // Reset the total price
@@ -120,5 +123,24 @@ function handlePaymentSubmission() {
     // Automatically hide the thank-you message after 3 seconds
     setTimeout(() => {
         orderMessage.style.display = "none";
+        ratingContainer.style.display = "none";
+
     }, 7000);
+}
+document.addEventListener("DOMContentLoaded", () => {
+    const stars = document.querySelectorAll("#stars .star");
+
+    stars.forEach(star => {
+        star.addEventListener("click", function() {
+            const rating = this.getAttribute("data-value");
+            updateStars(rating);
+        });
+    });
+});
+
+function updateStars(rating) {
+    const stars = document.querySelectorAll("#stars .star");
+    stars.forEach(star => {
+        star.textContent = star.getAttribute("data-value") <= rating ? "★" : "☆";
+    });
 }

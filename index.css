@@ -230,3 +230,21 @@ button[type="submit"]:hover {
     padding: 40px;
     border-radius: 2px;
 }
+
+#rating-container {
+    text-align: center;
+    margin-top: 10px;
+   
+}
+
+#stars {
+    font-size: 24px;
+    cursor: pointer;
+    color: gold;
+}
+
+.star {
+    font-size: 50px;
+    cursor: pointer;
+    padding: 5px;
+}
