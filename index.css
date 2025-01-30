@@ -248,3 +248,24 @@ button[type="submit"]:hover {
     cursor: pointer;
     padding: 5px;
 }
+@media (max-width: 480px) {
+    html {
+        background-color: white;
+    }
+    body {
+        max-width: 100%;
+        padding-bottom: 0px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 20px;
+    }
+}
