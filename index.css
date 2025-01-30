@@ -12,7 +12,7 @@ body {
 
 
 header {
-    background-image: url('images/bg_image.jpg');
+    background-image: url('/images/bg_image.jpg');
     background-size:cover;
     display: flex;
 } 
