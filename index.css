@@ -12,26 +12,28 @@ body {
 
 
 header {
-    background-image: url('images/bg-img.png');
-    background-size: cover;
+    background-image: url('images/bg_image.jpg');
+    background-size:cover;
     display: flex;
 } 
 .container {
     display: block;
  }
 h1 {
-    color: white;
+    color: #0A0A0A;
     font-size: 2.5rem;
     margin: 40px 0 10px 46px;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
 
 }
 p {
-    color: white;
+    color: #0A0A0A;
     font-size: 1.3rem;
     margin: 0 0 46px 46px;
     letter-spacing: 1px;
+    font-weight: bold;
+
 
 }
 
@@ -71,7 +73,7 @@ h2 {
 
 .food-ingredient {
     margin: 7px 0px;
-    color: #8B8B8B;
+    color: #9F9F7F;
     font-size: 1rem;
 }
 .item-price {
@@ -91,7 +93,7 @@ h2 {
     color: #3C3C3C;
 }
 .order-btn:hover {
-    background-color: #16DB99;
+    background-color: #3B7B7D;
 }
 .order-summary {
     display: block;
@@ -134,7 +136,7 @@ h2 {
 .complete-order-btn {
     display: block;
     color: white;
-    background-color: #16DB99;
+    background-color: #407A7F;
     border: none;
     border-radius: 4px;
     padding: 20px 0px;
@@ -147,7 +149,7 @@ h2 {
 }
 
 .complete-order-btn:hover{
-    background: #13b77e;
+    background: #43858F;
 
 }
 
@@ -186,7 +188,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-
+img {
+    width: 70px;
+}
 /* Form Elements */
 input[type="text"] {
     width: 100%;
@@ -200,7 +204,7 @@ input[type="text"] {
 
 button[type="submit"] {
     width: 100%;
-    background: #16DB99;
+    background: #407A7F;
     color: white;
     border: none;
     padding: 20px 0;
@@ -211,15 +215,15 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: #13b77e;
+    background: #43858F;
 
 
 }
 
 .hidden {
     display: none;
-    background-color: #ECFDF5;
-    color: #065F46;
+    background-color: #F1F7F8;
+    color: #407A7F;
     font-size: 24px;
     text-align: center;
     margin: 30px 46px;

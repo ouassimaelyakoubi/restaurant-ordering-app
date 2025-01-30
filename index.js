@@ -12,7 +12,7 @@ function renderMenu() {
         return `
         <div class="menu-item">
             <div class="food-icon">
-                ${menuItem.emoji}
+                <img src='${menuItem.emoji}' alt="moroccan tagine">
             </div>
             <div class="food-description">
                 <h2 class="food-title">${menuItem.name}</h2>
