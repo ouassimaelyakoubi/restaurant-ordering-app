@@ -13,33 +13,13 @@ body {
 
 
 header {
-    position: relative;
-    width: 100%;
-    min-height: 250px; /* Adjust as needed */
+    background-image: url('/images/bg_image.jpg');
+    background-size:cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/images/bg_image.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.6; /* Apply opacity only to the background */
-    z-index: -1;
-}
+    opacity: 0.6;
+} 
 .container {
     display: block;
-    position: relative; /* Ensures text stays above background */
-    z-index: 1;
  }
 h1 {
     color: #0A0A0A;
@@ -47,6 +27,7 @@ h1 {
     margin: 40px 0 10px 46px;
     font-weight: bold;
     letter-spacing: 1px;
+    opacity: 1;
 
 }
 p {
@@ -55,7 +36,7 @@ p {
     margin: 0 0 46px 46px;
     letter-spacing: 1px;
     font-weight: bold;
-
+    opacity: 1;
 
 }
 
