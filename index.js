@@ -70,9 +70,38 @@ document.addEventListener('click', function (e) {
     else if(e.target.id === "payment-modal"){
         paymentModal.style.display = "none";
 
-    }else if (e.target.type === "submit") {
+    }else if (e.target.id === "pay-btn") {
         e.preventDefault(); // Prevent form submission
-        handlePaymentSubmission(); // Call the function to handle payment
+        let isValid = true; // Track if all fields are valid
+
+    // Clear previous error messages
+    document.querySelectorAll(".error-message").forEach(msg => msg.textContent = "");
+
+    // Validate Name
+    const nameInput = document.getElementById("name");
+    if (nameInput.value.trim() === "") {
+        document.getElementById("name-error").textContent = "Please enter your name.";
+        isValid = false;
+    }
+
+    // Validate Card Number
+    const cardInput = document.getElementById("card-number");
+    if (cardInput.value.trim().length !== 16 || isNaN(cardInput.value.trim())) {
+        document.getElementById("card-error").textContent = "Enter a valid 16-digit card number.";
+        isValid = false;
+    }
+
+    // Validate CVV
+    const cvvInput = document.getElementById("cvv");
+    if (cvvInput.value.trim().length !== 3 || isNaN(cvvInput.value.trim())) {
+        document.getElementById("cvv-error").textContent = "Enter a valid 3-digit CVV.";
+        isValid = false;
+    }
+
+    // If all fields are valid, process the payment
+    if (isValid) {
+        handlePaymentSubmission();
+    }
     }
 });
 
@@ -114,6 +143,7 @@ function handlePaymentSubmission() {
     // Show the rating section
     const ratingContainer = document.getElementById("rating-container");
     ratingContainer.style.display = "block";
+    document.getElementById("payment-form").reset(); // Clears all inputs
     orders = []; // Clear the orders array
     orderList.innerHTML = ""; // Clear the order list UI
     orderPrice.textContent = "$0"; // Reset the total price

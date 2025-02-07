@@ -32,10 +32,13 @@
                 <div class="modal-content">
                     <h2>Enter card details</h2>
                     <form id="payment-form">
-                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        <input type="text" id="name" name="name" required placeholder="Enter your name" >
+                        <span class="error-message" id="name-error"></span>
                         <input type="text" id="card-number" name="card-number" maxlength="16" required placeholder="Enter card number">
+                        <span class="error-message" id="card-error"></span>
                         <input type="text" id="cvv" name="cvv" maxlength="3" required placeholder="Enter CVV">
-                        
+                        <span class="error-message" id="cvv-error"></span>
+
                         <button type="submit" id="pay-btn">Pay</button>
                     </form>
                 </div>

@@ -16,6 +16,7 @@ header {
     background-image: url('/images/bg_image.jpg');
     background-size:cover;
     display: flex;
+    opacity: 0.6;
 } 
 .container {
     display: block;
@@ -343,4 +344,11 @@ button[type="submit"]:hover {
     #rating-container p {
         font-size: 18px;
     }
+}
+.error-message {
+    color: red;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 5px;
+    text-align: start;
 }
