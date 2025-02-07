@@ -16,7 +16,7 @@ header {
     background-image: url('/images/bg_image.jpg');
     background-size:cover;
     display: flex;
-    filter: brightness(70%);
+    filter: brightness(120%);
 } 
 .container {
     display: block;
