@@ -16,27 +16,25 @@ header {
     background-image: url('/images/bg_image.jpg');
     background-size:cover;
     display: flex;
-    opacity: 0.6;
+    filter: brightness(70%);
 } 
 .container {
     display: block;
  }
 h1 {
-    color: #0A0A0A;
+    color: black;
     font-size: 2.5rem;
     margin: 40px 0 10px 46px;
     font-weight: bold;
     letter-spacing: 1px;
-    opacity: 1;
 
 }
 p {
-    color: #0A0A0A;
+    color: black;
     font-size: 1.3rem;
     margin: 0 0 46px 46px;
     letter-spacing: 1px;
     font-weight: bold;
-    opacity: 1;
 
 }
 
